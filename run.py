@@ -1,3 +1,8 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import random
+
+def boardLayout(board): #prints out the board
+    print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
+    print('-----------')
+    print(' ' + board[4] + ' | ' + board[5] + ' | ' + board[6])
+    print('-----------')
+    print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
