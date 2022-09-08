@@ -18,3 +18,9 @@ def playerSymbol():
     else:
         return ['O', 'X'] #Computer have X and player O
 
+#Choose random who makes the first move
+def whoGoesFirst():
+    if random.randint(0, 1) == 0:
+        return 'computer'
+    else: 
+        return 'player'
