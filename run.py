@@ -55,3 +55,11 @@ def getBoardCopy(board):
 #checks if the space on the board is still empty
 def isSpaceFree(board, move):
     return board[move] == ' '
+
+#inputs  for player moves, transformed to integers
+def getPlayerMove(board):
+    move = ' '
+    while move not in '1 2 3 4 5 6 7 8 9'.split() or not isSpaceFree(board, int(move)):
+        print('What is your next move? Choose a empty spot!(1-9)')
+        move = input()
+    return int(move)
