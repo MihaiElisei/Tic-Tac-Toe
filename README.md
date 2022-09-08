@@ -30,3 +30,28 @@ The winner is the player who have identical symbols on a row, column or diagonal
     * You must enter numbers  
     * You cannot enter the same grid number twice
     ![Game Board](images/game-board1.png)
+* Computer blocks the players next move if possible if the player is about to win on the next move
+
+# Testing 
+
+I have manually tested the game doing the following:
+* Passed the code through a PEP8 linter and cofirmed there are no problems with the code only some line breakes wicth does not affect the code
+![PEP8](images/PEP8.png)
+* Given invalid inputs
+* Tested on my local terminal and on Heroku terminal
+
+# Bugs
+
+## Solved Bugs
+
+* When I wrote the code I was getting an error because I didn`t changet the user input to an iteger
+
+# Deployment
+This project was deplyed using mock terminal for Heroku
+* Steps for deployment
+    * Fork or clone repository
+    * Create a new Heroku app
+    * Set the buildbacks to Python and NodeJS in that order
+    * Link the Heroku app to the repository
+    * Click on Deploy
+
