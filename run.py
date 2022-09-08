@@ -63,3 +63,15 @@ def getPlayerMove(board):
         print('What is your next move? Choose a empty spot!(1-9)')
         move = input()
     return int(move)
+
+#checks if there are valid moves and append them to a list,  returns a valid move from th move list
+def chooseRandomMoveFromList(board, movesList):
+    possibleMoves = []
+    for i in movesList:
+        if isSpaceFree(board, i):
+            possibleMoves.append(i)
+    
+    if len(possibleMoves) != 0:
+        return random.choice(possibleMoves)
+    else:
+        return None
