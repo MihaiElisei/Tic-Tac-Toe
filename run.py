@@ -24,3 +24,23 @@ def whoGoesFirst():
         return 'computer'
     else: 
         return 'player'
+
+#returns True if the player wants to play again, otherwise it returns False.
+def replay():
+    print('Do you want to play again? (yes or no)')
+    return input().lower().startswith('y')
+
+
+def makeMove(board, letter, move):
+    board[move] = letter
+
+#check if there is a winner
+def isWinner(board, letter):
+    return ((board[7] == letter and board[8] == letter and board[9] == letter) or # across the top
+    (board[4] == letter and board[5] == letter and board[6] == letter) or # across the middle
+    (board[1] == letter and board[2] == letter and board[3] == letter) or # across the bottom
+    (board[7] == letter and board[4] == letter and board[1] == letter) or #  left side
+    (board[8] == letter and board[5] == letter and board[2] == letter) or #  middle
+    (board[9] == letter and board[6] == letter and board[3] == letter) or #  right side
+    (board[7] == letter and board[5] == letter and board[3] == letter) or # diagonal
+    (board[9] == letter and board[5] == letter and board[1] == letter)) # diagonal
