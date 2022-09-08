@@ -44,3 +44,14 @@ def isWinner(board, letter):
     (board[9] == letter and board[6] == letter and board[3] == letter) or #  right side
     (board[7] == letter and board[5] == letter and board[3] == letter) or # diagonal
     (board[9] == letter and board[5] == letter and board[1] == letter)) # diagonal
+
+#Make a list with the copy of the board 
+def getBoardCopy(board):
+    copyBoard = []
+    for i in board:
+        copyBoard.append(i)
+    return copyBoard
+
+#checks if the space on the board is still empty
+def isSpaceFree(board, move):
+    return board[move] == ' '
